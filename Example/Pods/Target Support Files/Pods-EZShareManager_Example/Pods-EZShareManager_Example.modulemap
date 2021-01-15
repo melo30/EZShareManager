@@ -1,0 +1,6 @@
+framework module Pods_EZShareManager_Example {
+  umbrella header "Pods-EZShareManager_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

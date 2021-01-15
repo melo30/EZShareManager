@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D5BDEDC223DDE4737154D6A /* Pods_EZShareManager_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53E9B08BC4953F11EBDD881 /* Pods_EZShareManager_Example.framework */; };
+		32C744E0BF878ACC5F028025 /* Pods_EZShareManager_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F41D8B17AA646DB37F4DECC /* Pods_EZShareManager_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,9 +23,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		72924B9D71BCDBE1490FBE25 /* Pods_EZShareManager_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B659BF7074D6B4867EB2FADB /* Pods_EZShareManager_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		B9166262395C4105E56ABEA8 /* Pods_EZShareManager_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FDC86F403AB89F461D9167 /* Pods_EZShareManager_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		0AC396C03370306BD0EBE120 /* Pods-EZShareManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZShareManager_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EZShareManager_Tests/Pods-EZShareManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1728107BABDEC893CC38A2B8 /* Pods-EZShareManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZShareManager_Example.release.xcconfig"; path = "Target Support Files/Pods-EZShareManager_Example/Pods-EZShareManager_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2703C283FB98DFE134F3EF05 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2703C283FB98DFE134F3EF05 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* EZShareManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZShareManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,13 +60,13 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		62240290D81B4F3DA8778209 /* Pods-EZShareManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZShareManager_Example.debug.xcconfig"; path = "Target Support Files/Pods-EZShareManager_Example/Pods-EZShareManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6CA82DBE1703D95DA6E08392 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6CA82DBE1703D95DA6E08392 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A791A37592C7EDF0BB76F514 /* EZShareManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EZShareManager.podspec; path = ../EZShareManager.podspec; sourceTree = "<group>"; };
-		B659BF7074D6B4867EB2FADB /* Pods_EZShareManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZShareManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8FDC86F403AB89F461D9167 /* Pods_EZShareManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZShareManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F41D8B17AA646DB37F4DECC /* Pods_EZShareManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZShareManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A791A37592C7EDF0BB76F514 /* EZShareManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EZShareManager.podspec; path = ../EZShareManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CE932C4096AA6AD1C248B223 /* Pods-EZShareManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZShareManager_Tests.release.xcconfig"; path = "Target Support Files/Pods-EZShareManager_Tests/Pods-EZShareManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F53E9B08BC4953F11EBDD881 /* Pods_EZShareManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZShareManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				B9166262395C4105E56ABEA8 /* Pods_EZShareManager_Example.framework in Frameworks */,
+				1D5BDEDC223DDE4737154D6A /* Pods_EZShareManager_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				72924B9D71BCDBE1490FBE25 /* Pods_EZShareManager_Tests.framework in Frameworks */,
+				32C744E0BF878ACC5F028025 /* Pods_EZShareManager_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +123,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				C8FDC86F403AB89F461D9167 /* Pods_EZShareManager_Example.framework */,
-				B659BF7074D6B4867EB2FADB /* Pods_EZShareManager_Tests.framework */,
+				F53E9B08BC4953F11EBDD881 /* Pods_EZShareManager_Example.framework */,
+				9F41D8B17AA646DB37F4DECC /* Pods_EZShareManager_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -193,7 +193,6 @@
 				0AC396C03370306BD0EBE120 /* Pods-EZShareManager_Tests.debug.xcconfig */,
 				CE932C4096AA6AD1C248B223 /* Pods-EZShareManager_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				69C1B4D2A553A59325643263 /* [CP] Embed Pods Frameworks */,
+				2E59318CFA3D093E4622339B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -295,22 +295,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		69C1B4D2A553A59325643263 /* [CP] Embed Pods Frameworks */ = {
+		2E59318CFA3D093E4622339B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EZShareManager_Example/Pods-EZShareManager_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/EZShareManager/EZShareManager.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-EZShareManager_Example/Pods-EZShareManager_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_QQ.bundle",
+				"${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_SinaWeibo.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_WeChat.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZShareManager.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK_JS_QQ.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK_JS_SinaWeibo.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK_JS_WeChat.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EZShareManager_Example/Pods-EZShareManager_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EZShareManager_Example/Pods-EZShareManager_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8496A8775E36B9E4C651D225 /* [CP] Check Pods Manifest.lock */ = {

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'EZShareManager'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of EZShareManager.'
+  s.summary          = '封装了ShareSDK分享'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -39,4 +39,15 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.static_framework = true
+  
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
+  s.dependency 'mob_sharesdk'# 主模块(必须)
+  s.dependency 'mob_sharesdk/ShareSDKPlatforms/QQ'
+  s.dependency 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
+  s.dependency 'mob_sharesdk/ShareSDKPlatforms/WeChat' #（微信sdk不带支付的命令）
+  
 end
