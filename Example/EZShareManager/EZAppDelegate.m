@@ -7,12 +7,22 @@
 //
 
 #import "EZAppDelegate.h"
+#import <ShareSDK/ShareSDK.h>
 
 @implementation EZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [ShareSDK registPlatforms:^(SSDKRegister *platformsRegister) {
+        //QQ
+        [platformsRegister setupQQWithAppId:@"101565838" appkey:@"" enableUniversalLink:YES universalLink:@"https://1xivm.share2dlink.com/"];
+        
+        //更新到4.3.3或者以上版本，微信初始化需要使用以下初始化
+        [platformsRegister setupWeChatWithAppId:@"wx9707f3430c9b321c" appSecret:@"726e7f836849e27e8d46aab0e6ab41f8" universalLink:@"https://1xivm.share2dlink.com/"];
+        //新浪
+        [platformsRegister setupSinaWeiboWithAppkey:@"2588225579" appSecret:@"f59bcc85ad6d693b729083fb3c21609e" redirectUrl: @"http://www.manjiwang.com" universalLink:@"https://1xivm.share2dlink.com/"];
+
+    }];
     return YES;
 }
 

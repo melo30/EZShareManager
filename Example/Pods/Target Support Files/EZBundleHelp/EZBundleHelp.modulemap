@@ -1,0 +1,6 @@
+framework module EZBundleHelp {
+  umbrella header "EZBundleHelp-umbrella.h"
+
+  export *
+  module * { export * }
+}

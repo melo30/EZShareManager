@@ -19,7 +19,15 @@
     "ios": "9.0"
   },
   "source_files": "EZShareManager/Classes/**/*",
+  "resource_bundles": {
+    "EZShareManager": [
+      "EZShareManager/Assets/*.{png,xcassets,xib}"
+    ]
+  },
   "static_framework": true,
+  "user_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  },
   "pod_target_xcconfig": {
     "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
   },
@@ -34,6 +42,27 @@
 
     ],
     "mob_sharesdk/ShareSDKPlatforms/WeChat": [
+
+    ],
+    "mob_sharesdk/ShareSDKUI": [
+
+    ],
+    "Masonry": [
+
+    ],
+    "CTMediator": [
+
+    ],
+    "EZBundleHelp": [
+
+    ],
+    "YYModel": [
+
+    ],
+    "YYWebImage": [
+
+    ],
+    "MJProgressHUD": [
 
     ]
   }

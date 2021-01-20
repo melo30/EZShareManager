@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EZShareManager'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '封装了ShareSDK分享'
 
 # This description is used to generate tags and improve search results.
@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'EZShareManager/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'EZShareManager' => ['EZShareManager/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'EZShareManager' => ['EZShareManager/Assets/*.{png,xcassets,xib}']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
@@ -49,5 +49,11 @@ TODO: Add long description of the pod here.
   s.dependency 'mob_sharesdk/ShareSDKPlatforms/QQ'
   s.dependency 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
   s.dependency 'mob_sharesdk/ShareSDKPlatforms/WeChat' #（微信sdk不带支付的命令）
-  
+  s.dependency 'mob_sharesdk/ShareSDKUI'# UI模块(非必须，需要用到ShareSDK提供的分享菜单栏和分享编辑页面需要以下1行)
+  s.dependency 'Masonry'
+  s.dependency 'CTMediator'
+  s.dependency 'EZBundleHelp'
+  s.dependency 'YYModel'
+  s.dependency 'YYWebImage'
+  s.dependency 'MJProgressHUD'
 end
