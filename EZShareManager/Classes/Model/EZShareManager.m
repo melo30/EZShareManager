@@ -213,9 +213,21 @@
             break;
     }
     
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params SSDKSetupShareParamsByText:@"test" images:[UIImage bundleKey:@"EZShareManager" imageName:@"ezshare_qq"] url:[NSURL URLWithString:@"http://www.mob.com/"] title:@"title" type:SSDKContentTypeAuto];
+    NSString *title = _gloabalModel.generalOptions.title;
+    NSString *text = _gloabalModel.generalOptions.describe;
+    NSString *image = _gloabalModel.generalOptions.img;
+    NSArray *images = _gloabalModel.generalOptions.images;
+    UIImage *imageObj;
+    if (images.count > 0) {
+        imageObj = [images firstObject];
+    }
+    if (image == nil && imageObj == nil) {
+        imageObj = [UIImage bundleKey:@"EZShareManager" imageName:@"ezshare_wnjLogo"];
+    }
+    NSURL *url = [NSURL URLWithString:_gloabalModel.generalOptions.linkurl?_gloabalModel.generalOptions.linkurl:@"www.manjiwang.com"];
     
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params SSDKSetupShareParamsByText:text images:image?image:imageObj url:url title:title type:SSDKContentTypeAuto];
     [ShareSDK share:platformType
              parameters:params
     onStateChanged:^(SSDKResponseState state,

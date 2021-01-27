@@ -15,7 +15,7 @@
 {
     [ShareSDK registPlatforms:^(SSDKRegister *platformsRegister) {
         //QQ
-        [platformsRegister setupQQWithAppId:@"101565838" appkey:@"" enableUniversalLink:YES universalLink:@"https://1xivm.share2dlink.com/"];
+        [platformsRegister setupQQWithAppId:@"101565838" appkey:@"" enableUniversalLink:YES universalLink:@"https://1xivm.share2dlink.com/qq_conn/101565838"];
         
         //更新到4.3.3或者以上版本，微信初始化需要使用以下初始化
         [platformsRegister setupWeChatWithAppId:@"wx9707f3430c9b321c" appSecret:@"726e7f836849e27e8d46aab0e6ab41f8" universalLink:@"https://1xivm.share2dlink.com/"];

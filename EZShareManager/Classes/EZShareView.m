@@ -42,15 +42,19 @@ static NSInteger const viewCornerRadius = 10;
         [tap addTarget:self action:@selector(viewBgTapGesture:)];
         [self addGestureRecognizer:tap];
         
-        [self initSubviews];
     }
     return self;
+}
+
+- (void)setOnlyShareView:(BOOL)onlyShareView {
+    _onlyShareView = onlyShareView;
+    [self initSubviews];
 }
 
 #pragma mark - private
 - (void)initSubviews {
     
-    self.bgViewHeight = self.onlyShareView ? 160.0 : 240.0 + 50.0 + 15.0;
+    self.bgViewHeight = self.onlyShareView ? 160.0 + 50.0 + 15.0 : 240.0 + 50.0 + 15.0;
     
     _bgView = [UIView new];
     _bgView.layer.masksToBounds = YES;
@@ -122,6 +126,7 @@ static NSInteger const viewCornerRadius = 10;
     EZShareCollectionCell *cell = (EZShareCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
     
     if (model.type == EZShareUIViewTypeXunliao || model.type == EZShareUIViewTypeHaoyouquan) {
+        [self hide];
         return;
     }
     
@@ -143,7 +148,9 @@ static NSInteger const viewCornerRadius = 10;
     
     if (model.type == EZShareUIViewTypeReport) {//举报
         UIViewController *reportVC = [[CTMediator sharedInstance] performTarget:@"ArticleDetail" action:@"detailReport" params:@{@"newsId":self.newsId?:@""} shouldCacheTarget:YES];
+        [self hide];
         [[self findCurrentViewController].navigationController pushViewController:reportVC animated:YES];
+        return;
     }
     
     if (model.type == EZShareUIViewTypeCollection) {//收藏

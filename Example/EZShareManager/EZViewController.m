@@ -65,7 +65,7 @@
                 @"linkurl": shareUrl?shareUrl:@""
                 },
         @"singleShareType":@"",
-        @"onlyShareView":@(0),
+        @"onlyShareView":@(1),
         @"newsId":@"xxxxxx",
         @"isCollect":@(1)} shouldCacheTarget:YES];
 }
