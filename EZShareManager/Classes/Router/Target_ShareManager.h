@@ -11,9 +11,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Target_ShareManager : NSObject
 
-/// 只有分享
+/// 第三方分享
 /// @param params ..
 - (id)Action_SimpleShare:(NSDictionary *)params;
+
+/// 第三方登录
+/// @param platformType  qq / wechat / weibo
+- (id)Action_SimpleLogin:(NSDictionary *)params;
 
 @end
 

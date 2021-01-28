@@ -23,6 +23,7 @@
 #import "WeiboSDK.h"
 #import <MessageUI/MessageUI.h>
 
+typedef void(^loginResultBlock)(NSDictionary *info);
 @interface EZShareManager () <MFMessageComposeViewControllerDelegate>
 
 @property (nonatomic, strong) EZShareGloabalModel *gloabalModel;
@@ -293,5 +294,30 @@
 - (void)codeShare {
     self.codeView = [[EZShareQRCodeView alloc] initWithModel:self.gloabalModel.QRCodeOptions];
     [self.codeView show];
+}
+
+- (void)threeLoginWithType:(NSDictionary *)params {
+    NSString *platformType = [params objectForKey:@"platformType"];
+    SSDKPlatformType type = 0;
+    if ([platformType isEqualToString:@"qq"]) {
+        type = SSDKPlatformTypeQQ;
+    }else if ([platformType isEqualToString:@"wechat"]) {
+        type = SSDKPlatformTypeWechat;
+    }else if ([platformType isEqualToString:@"weibo"]) {
+        type = SSDKPlatformTypeSinaWeibo;
+    }
+    [ShareSDK authorize:type settings:nil onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
+        if (state == SSDKResponseStateSuccess) {
+            loginResultBlock block = [params objectForKey:@"completion"];
+            NSDictionary *userInfo = [user yy_modelToJSONObject];
+            if (block) {
+                block(userInfo);
+            }
+        }else if (state == SSDKResponseStateCancel) {
+            NSLog(@"取消");
+        }else if (state == SSDKResponseStateFail) {
+            NSLog(@"失败，%@",error);
+        }
+    }];
 }
 @end

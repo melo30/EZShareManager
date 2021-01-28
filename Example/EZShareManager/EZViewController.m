@@ -21,16 +21,37 @@
 {
     [super viewDidLoad];
     
-    UIButton *btn = [UIButton new];
-    [btn setTitle:@"Share" forState:UIControlStateNormal];
-    btn.frame = CGRectMake(100, 100, 100, 100);
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(btnEventAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    UIButton *shareBtn = [UIButton new];
+    [shareBtn setTitle:@"Share" forState:UIControlStateNormal];
+    shareBtn.frame = CGRectMake(100, 100, 100, 100);
+    [shareBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [shareBtn addTarget:self action:@selector(shareBtnEventAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:shareBtn];
+    
+    UIButton *weixinLoginBtn = [UIButton new];
+    [weixinLoginBtn setTitle:@"微信登录" forState:UIControlStateNormal];
+    weixinLoginBtn.frame = CGRectMake(100, 150, 100, 100);
+    [weixinLoginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [weixinLoginBtn addTarget:self action:@selector(weixinBtnEventAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:weixinLoginBtn];
+    
+    UIButton *qqLoginBtn = [UIButton new];
+    [qqLoginBtn setTitle:@"QQ登录" forState:UIControlStateNormal];
+    qqLoginBtn.frame = CGRectMake(100, 200, 100, 100);
+    [qqLoginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [qqLoginBtn addTarget:self action:@selector(qqBtnEventAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:qqLoginBtn];
+    
+    UIButton *weiboLoginBtn = [UIButton new];
+    [weiboLoginBtn setTitle:@"微博登录" forState:UIControlStateNormal];
+    weiboLoginBtn.frame = CGRectMake(100, 250, 100, 100);
+    [weiboLoginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [weiboLoginBtn addTarget:self action:@selector(weiboBtnEventAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:weiboLoginBtn];
     
 }
 
-- (void)btnEventAction:(UIButton *)sender {
+- (void)shareBtnEventAction:(UIButton *)sender {
     NSString *shareUrl = @"njwap.manjiwangtest.com/#/sharePage?newsId=ce8ef419496747a792a9caf8c2977014";
     NSString *img = @"https://nujiang.oss-cn-hangzhou.aliyuncs.com/images/2020/11/09/16049107560971651.jpg";
     NSString *title = @"测试标题...";
@@ -68,6 +89,18 @@
         @"onlyShareView":@(1),
         @"newsId":@"xxxxxx",
         @"isCollect":@(1)} shouldCacheTarget:YES];
+}
+
+- (void)weixinBtnEventAction:(UIButton *)sender {
+    [[CTMediator sharedInstance] performTarget:@"ShareManager" action:@"SimpleLogin" params:@{@"platformType":@"wechat"} shouldCacheTarget:YES];
+}
+
+- (void)qqBtnEventAction:(UIButton *)sender {
+    [[CTMediator sharedInstance] performTarget:@"ShareManager" action:@"SimpleLogin" params:@{@"platformType":@"qq"} shouldCacheTarget:YES];
+}
+
+- (void)weiboBtnEventAction:(UIButton *)sender {
+    [[CTMediator sharedInstance] performTarget:@"ShareManager" action:@"SimpleLogin" params:@{@"platformType":@"weibo"} shouldCacheTarget:YES];
 }
 
 - (void)didReceiveMemoryWarning

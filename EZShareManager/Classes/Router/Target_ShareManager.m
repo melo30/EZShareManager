@@ -16,5 +16,9 @@
     return nil;
 }
 
-
+/// 登录
+- (id)Action_SimpleLogin:(NSDictionary *)params {
+    [[EZShareManager shareInstance] threeLoginWithType:params];
+    return nil;
+}
 @end

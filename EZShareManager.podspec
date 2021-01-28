@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EZShareManager'
-  s.version          = '0.1.3'
-  s.summary          = '封装了ShareSDK分享'
+  s.version          = '0.1.4'
+  s.summary          = '封装了ShareSDK的第三方分享和第三方登录'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 单例
 + (instancetype)shareInstance;
 
-/// 配置数据
+#pragma mark - 分享相关
+/// 配置分享数据
 - (void)configerDatasWithParams:(NSDictionary *)params;
 
 /// 第三方分享
@@ -29,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 二维码分享
 - (void)codeShare;
+
+#pragma mark - 登录相关
+- (void)threeLoginWithType:(NSDictionary *)params;
 
 @end
 
