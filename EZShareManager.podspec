@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EZShareManager'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = '封装了ShareSDK的第三方分享和第三方登录'
 
 # This description is used to generate tags and improve search results.
@@ -42,8 +42,8 @@ TODO: Add long description of the pod here.
   
   s.static_framework = true
   
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  #s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  #s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
   s.dependency 'mob_sharesdk'# 主模块(必须)
   s.dependency 'mob_sharesdk/ShareSDKPlatforms/QQ'

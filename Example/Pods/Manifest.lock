@@ -1,7 +1,7 @@
 PODS:
   - CTMediator (44)
   - EZBundleHelp (0.1.0)
-  - EZShareManager (0.1.0):
+  - EZShareManager (0.1.5):
     - CTMediator
     - EZBundleHelp
     - Masonry
@@ -65,7 +65,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CTMediator: 933dba523da87bf875e4a7e8728945fbc512f1d2
   EZBundleHelp: b702b66f800566cba71016128652a5afc63c3e46
-  EZShareManager: 4a58e4f64406b168eb871fbfd4cff54d4dbd0569
+  EZShareManager: e39641ec9e849d2f7aed156e028efd5b0c2a35aa
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJProgressHUD: 817c06f7d4d2137ce68a69d0e737dbb037a7377e
   mob_sharesdk: 0e4039a6a6be6fb5f107f1803e4d90ab7fbe92c3
